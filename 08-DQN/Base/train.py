@@ -8,7 +8,7 @@ from model import (ReplayBuffer,
 from torch.utils.tensorboard import SummaryWriter
 
 SEED = 123 
-ENV_NAME = "MountainCar-v0"
+ENV_NAME = "CartPole-v1"
 EPISODES = int(1e06)
 BATCH_SIZE = 64
 MAX_SIZE = int(1e06)

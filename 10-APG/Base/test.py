@@ -4,7 +4,7 @@ import gymnasium as gym
 import tensorflow as tf
 
 SEED = 123
-ENV_NAME = "HalfCheetah-v5"
+ENV_NAME = "CartPole-v1"
 EPISODES = 10
 
 env = gym.make(ENV_NAME,

@@ -16,4 +16,3 @@ class TDPrediction:
     def update(self, state, next_state, reward):
         self.v[state] += self.alpha * (reward + (self.gamma * self.v[next_state]) - self.v[state]) 
         return self.v
-

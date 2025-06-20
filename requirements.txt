@@ -1,0 +1,14 @@
+numpy
+matplotlib.pyplot
+matplotlib.patches
+pandas
+gymnasium
+pygame
+io
+pickle
+tqdm
+tensorboard
+tensorflow
+keras
+collections
+os

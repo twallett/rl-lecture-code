@@ -197,3 +197,22 @@ cython_debug/
 
 __pycache__/
 *.pyc
+
+# MAB
+03-MAB/02-UCB/
+03-MAB/03-ThompsonSampling/
+
+# DP
+04-DP/02-ValueIteration/
+
+# MC
+05-MC/03-OnPolicyMonteCarlo/
+05-MC/04-OffPolicyMonteCarlo/
+
+# TD
+06-TD/02-SARSA/
+06-TD/03-Q-Learning/
+06-TD/04-Double-Q-Learning/
+06-TD/05-nPrediction/
+06-TD/06-nSARSA/
+06-TD/07-nTreeBackup/

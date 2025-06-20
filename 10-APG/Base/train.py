@@ -7,7 +7,7 @@ from model import (Buffer,
 from torch.utils.tensorboard import SummaryWriter
 
 SEED = 123 
-ENV_NAME = "HalfCheetah-v5"
+ENV_NAME = "CartPole-v1"
 EPISODES = 20000
 GAMMA = 0.99
 ALPHA_PI = 3e-04

@@ -6,7 +6,7 @@ SEED = 123
 SIZE = 3
 GAMMA = 0.9
 EPISODES = 10
-FPS = 1
+FPS = 0
 
 env = GridWorldEnv(render_mode="human",
                    size=SIZE)

@@ -2,12 +2,10 @@
 
 # how to construct an open ai gym environment from scratch: https://www.gymlibrary.dev/content/environment_creation/
 
-import gym
+import gymnasium as gym
 import pygame
-from gym import spaces
+from gymnasium import spaces
 import numpy as np
-import matplotlib.pyplot as plt
-from io import BytesIO
 
 class GridWorldEnv(gym.Env):
     
@@ -38,6 +36,10 @@ class GridWorldEnv(gym.Env):
             3: np.array([0,-1]), # left
         }
         
+        # Lecture 4: Deterministic State Transitions 
+        # ----------------------------------------------------------------
+        self.transition_sequence = self.generate_transition_sequence(self.size) 
+        
         # Metrics
         # ----------------------------------------------------------------
         self.v = None
@@ -47,6 +49,10 @@ class GridWorldEnv(gym.Env):
         self.average_steps = 0
         self.average_steps_per_episode = []
         
+    def generate_transition_sequence(self, size):
+        """Generate a sequence of state transitions based on the grid size."""
+        return [[row,col] for row in range(size) for col in range(size)]
+
     def reset(self, seed=None):
         super().reset(seed=seed) 
         
@@ -73,9 +79,15 @@ class GridWorldEnv(gym.Env):
             
         return observation
     
-    def step(self, action):
-        
-        self.steps += 1
+    def step(self, action, deterministic = None):
+         
+        # Lecture 4: Deterministic State Transitions 
+        # ----------------------------------------------------------------
+        if deterministic:
+            self.steps += 1
+            terminated = np.array_equal(self.transition_sequence[self.steps],self.terminal_state)
+            self.state = self.transition_sequence[self.steps]
+        terminated = np.array_equal(self.state, self.terminal_state)
 
         # Return Environment Reward Calculation  
         # ----------------------------------------------------------------
@@ -99,16 +111,17 @@ class GridWorldEnv(gym.Env):
         ]
         reward = values[action]
         step = directions[action][0]
-        self.state = ([self.state[0] + step[0], self.state[1] + step[1]] if values[action] != -1 else self.state)
-        terminated = np.array_equal(self.state, self.terminal_state)
-        observation = self.convert_2d_to_1d(self.state)
+        if not deterministic:
+            sampled_state = ([self.state[0] + step[0], self.state[1] + step[1]] if values[action] != -1 else self.state)
     
         # Metrics
         # ----------------------------------------------------------------
         if terminated:
             self.steps_per_episode.append(self.steps)
-            self.average = np.mean(self.steps_per_episode)
-            self.average_steps_per_episode.append(self.average) 
+            self.average_steps_per_episode.append(self.steps) 
+            self.average = np.mean(self.average_steps_per_episode)
+        
+        observation = self.convert_2d_to_1d(sampled_state) if not deterministic else self.convert_2d_to_1d(self.state)
         
         # Render Pygame Frame
         # ----------------------------------------------------------------
@@ -132,13 +145,13 @@ class GridWorldEnv(gym.Env):
         if self.window is None and self.render_mode == "human":
             pygame.init()
             pygame.display.init()
-            self.window = pygame.display.set_mode((self.window_size + 500, self.window_size + 70))
+            self.window = pygame.display.set_mode((self.window_size, self.window_size + 70))
         if self.clock is None and self.render_mode == "human":
             self.clock = pygame.time.Clock()
 
         # Pygame Frame 
         # ----------------------------------------------------------------    
-        frame = pygame.Surface((self.window_size + 500, self.window_size + 70))
+        frame = pygame.Surface((self.window_size, self.window_size + 70))
         frame.fill((255, 255, 255))
         pix_square_size = self.window_size / self.size 
 
@@ -249,14 +262,14 @@ class GridWorldEnv(gym.Env):
                 (pix_square_size * x, self.window_size),
                 width=2,
             )
-        
+
         # Draw Metrics
         # ---------------------------------------------------------------- 
         episode_text = self.font.render(f'Episode: {self.episode}', True, 0)
         step_text = self.font.render(f'Steps: {self.steps}', True, 0)
         font_size = 28
         font = pygame.font.Font(None, font_size)
-        title = font.render(f'Monte Carlo Prediction Vπ(s)', True, 0)
+        title = font.render(f'Iterative Policy Evaluation Vπ(s)', True, 0)
 
         text_x = 10
         text_y = self.window_size + 10
@@ -265,25 +278,6 @@ class GridWorldEnv(gym.Env):
         frame.blit(episode_text, (text_x, text_y))
         frame.blit(step_text, (text_x, step_text_y))
         frame.blit(title, (text_x + 150, step_text_y - 20))
-        
-        # Draw Metric Plot
-        # ----------------------------------------------------------------    
-        episodes = np.arange(1, len(self.average_steps_per_episode) + 1)
-        plt.figure(figsize=(5, 5))
-        plt.plot(episodes, self.average_steps_per_episode, marker='o', color='orange')
-        plt.xlabel('Episode')
-        plt.ylabel('Average Steps')
-        plt.title('Average Steps per Episode')
-        plt.gca().xaxis.set_major_locator(plt.MaxNLocator(integer=True))
-        plt.gca().yaxis.set_major_locator(plt.MaxNLocator(integer=True))
-        buf = BytesIO()
-        plt.savefig(buf, format='png')
-        buf.seek(0)
-        graph_surface = pygame.image.load(buf)
-        buf.close()
-        plt.close()
-        graph_x = self.window_size + 20
-        frame.blit(graph_surface, (graph_x, 20))
                 
         if self.render_mode == "human":
             self.window.blit(frame, frame.get_rect())
@@ -301,8 +295,4 @@ class GridWorldEnv(gym.Env):
     
     def convert_2d_to_1d(self, array):
         return (array[0] * self.size) + array[1]
-        
-        
-
-        
         

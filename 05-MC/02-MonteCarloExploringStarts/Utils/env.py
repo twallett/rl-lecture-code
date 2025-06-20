@@ -2,9 +2,9 @@
 
 # how to construct an open ai gym environment from scratch: https://www.gymlibrary.dev/content/environment_creation/
 
-import gym
+import gymnasium as gym
 import pygame
-from gym import spaces
+from gymnasium import spaces
 import numpy as np
 import matplotlib.pyplot as plt
 from io import BytesIO

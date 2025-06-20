@@ -54,6 +54,12 @@
 └── README.md
 ```
 
+## Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
 ## <u> Reinforcement Learning Lecture Code </u>
 
 DATS 6450 Reinforcement Learning @ GWU Lecture Code 
