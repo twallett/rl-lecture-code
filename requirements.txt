@@ -1,14 +1,10 @@
 numpy
-matplotlib.pyplot
-matplotlib.patches
+matplotlib
 pandas
+scikit-learn
 gymnasium
 pygame
-io
-pickle
 tqdm
 tensorboard
 tensorflow
 keras
-collections
-os
