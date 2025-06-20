@@ -2,24 +2,24 @@
 
 ```bash
 .
-├── Lecture-3-MAB
+├── 03-MAB
 │   └── EpsilonGreedy
-├── Lecture-4-DP
+├── 04-DP
 │   └── IterativePolicyEvaluation
-├── Lecture-5-MC
+├── 05-MC
 │   ├── MonteCarloExploringStarts
 │   └── MonteCarloPrediction
-├── Lecture-6-TD
+├── 06-TD
 │   └── TDPrediction
-├── Lecture-7-FA
+├── 07-FA
 │   └── Base
-├── Lecture-8-DQN
+├── 08-DQN
 │   └── Base
-├── Lecture-9-PG
+├── 09-PG
 │   └── Base
-├── Lecture-10-APG
+├── 010-APG
 │   └── Base
-├── Lecture-11-MCTS
+├── 011-MCTS
 │   └── Base
 ├── .gitignore
 ├── LICENSE
@@ -30,24 +30,24 @@
 
 ```markdown
 .
-├── Lecture-3-MAB
+├── 03-MAB
 │   └── EpsilonGreedy `Bernoulli & Gaussian generated environment using numpy`
-├── Lecture-4-DP
+├── 04-DP
 │   └── IterativePolicyEvaluation `GridWorldEnv`
-├── Lecture-5-MC
+├── 05-MC
 │   ├── MonteCarloExploringStarts `GridWorldEnv`
 │   └── MonteCarloPrediction `GridWorldEnv`
-├── Lecture-6-TD
+├── 06-TD
 │   └── TDPrediction `GridWorldEnv`
-├── Lecture-7-FA
+├── 07-FA
 │   └── Base `MountainCarContinuous-v0`
-├── Lecture-8-DQN
+├── 08-DQN
 │   └── Base `CartPole-v1`
-├── Lecture-9-PG
+├── 09-PG
 │   └── Base `CartPole-v1`
-├── Lecture-10-APG
+├── 010-APG
 │   └── Base `CartPole-v1`
-├── Lecture-11-MCTS
+├── 011-MCTS
 │   └── Base `CartPole-v1`
 ├── .gitignore
 ├── LICENSE
