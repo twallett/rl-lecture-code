@@ -152,7 +152,7 @@ This repository contains implementations of various Reinforcement Learning algor
 
 ## References
 
-Tensorflow Python API documentation ([Web Link](https://docs.pytorch.org/docs/stable/index.html))
+Tensorflow Python API documentation ([Web Link](https://www.tensorflow.org/api_docs/python/tf/all_symbols))
 
 ## Usage
 
