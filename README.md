@@ -3,14 +3,14 @@
 ```bash
 .
 ├── 03-MAB
-│   └── EpsilonGreedy
+│   └── 01-EpsilonGreedy
 ├── 04-DP
-│   └── IterativePolicyEvaluation
+│   └── 01-IterativePolicyEvaluation
 ├── 05-MC
-│   ├── MonteCarloExploringStarts
-│   └── MonteCarloPrediction
+│   ├── 01-MonteCarloExploringStarts
+│   └── 02-MonteCarloPrediction
 ├── 06-TD
-│   └── TDPrediction
+│   └── 01-TDPrediction
 ├── 07-FA
 │   └── Base
 ├── 08-DQN
@@ -31,14 +31,14 @@
 ```markdown
 .
 ├── 03-MAB
-│   └── EpsilonGreedy `Bernoulli & Gaussian generated environment using numpy`
+│   └── 01-EpsilonGreedy `Bernoulli & Gaussian generated environment using numpy`
 ├── 04-DP
-│   └── IterativePolicyEvaluation `GridWorldEnv`
+│   └── 01-IterativePolicyEvaluation `GridWorldEnv`
 ├── 05-MC
-│   ├── MonteCarloExploringStarts `GridWorldEnv`
-│   └── MonteCarloPrediction `GridWorldEnv`
+│   ├── 01-MonteCarloExploringStarts `GridWorldEnv`
+│   └── 02-MonteCarloPrediction `GridWorldEnv`
 ├── 06-TD
-│   └── TDPrediction `GridWorldEnv`
+│   └── 01-TDPrediction `GridWorldEnv`
 ├── 07-FA
 │   └── Base `MountainCarContinuous-v0`
 ├── 08-DQN
