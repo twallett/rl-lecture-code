@@ -71,7 +71,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="images/3-1.pdf" width="100%">
+      <img src="images/3-1_page_1.png" width="100%">
     </td>
   </tr>
 </table>
