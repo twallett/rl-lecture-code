@@ -71,7 +71,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="images/3-1_page_1.png" width="100%">
+      <img src="images/3-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -81,7 +81,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/4-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -91,7 +91,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/5-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -101,7 +101,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/6-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -111,7 +111,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/7-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -121,7 +121,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/8-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -131,7 +131,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/9-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -141,7 +141,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/10-1.png" width="100%">
     </td>
   </tr>
 </table>
@@ -151,7 +151,7 @@ This repository contains implementations of various Reinforcement Learning algor
 <table>
   <tr>
     <td style="width: 50%;">
-      <img src="01-Ticker/plots/GRU_SPY_forecast.png" width="100%">
+      <img src="images/11-1.png" width="100%">
     </td>
   </tr>
 </table>
