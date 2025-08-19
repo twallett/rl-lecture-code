@@ -2,7 +2,6 @@
 import os
 from tqdm import tqdm
 import gymnasium as gym 
-# import highway_env
 from model import PolicyGradient
 from torch.utils.tensorboard import SummaryWriter
 
@@ -13,8 +12,6 @@ GAMMA = 0.99
 ALPHA_PI = 3e-04
 ALPHA_V = 1e-03
 POLICY = 'mlp'
-
-# highway_env._register_highway_envs()
 
 env = gym.make(ENV_NAME)
 ACTIONS_DIM = env.action_space.n

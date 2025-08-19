@@ -8,7 +8,7 @@ from torch.utils.tensorboard import SummaryWriter
 
 SEED = 123 
 ENV_NAME = "CartPole-v1"
-EPISODES = 2000
+EPISODES = 1000
 GAMMA = 0.99
 ALPHA_PI = 3e-04
 ALPHA_V = 1e-03
@@ -17,13 +17,13 @@ EPSILON = 0.2
 POLICY = 'mlp'
 
 env = gym.make(ENV_NAME)
-ACTIONS_DIM = env.action_space.shape
+ACTIONS_DIM = env.action_space.n
 STATE_DIM = env.observation_space.shape
 
 buffer = Buffer(max_trajectories=MAX_TRAJECTORIES)
 
 model = PPOClip(state_dim=STATE_DIM,
-                num_actions=ACTIONS_DIM[0],
+                num_actions=ACTIONS_DIM,
                 gamma=GAMMA,
                 alpha_pi = ALPHA_PI,
                 alpha_v =ALPHA_V,

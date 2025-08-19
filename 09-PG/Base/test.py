@@ -18,7 +18,7 @@ for episode in range(EPISODES):
     state, _ = env.reset(seed = SEED)
     done = False
     while not done:
-        logits = model(tf.convert_to_tensor([state], dtype=tf.float32))
+        logits = model.predict(tf.convert_to_tensor([state], dtype=tf.float32))
         action_dist = tf.random.categorical(logits, num_samples=1)
         action = tf.squeeze(action_dist, axis = -1).numpy().item()
         next_state, reward, terminated, truncated, info = env.step(action)
