@@ -34,3 +34,4 @@ model_average_plot(data, rewards, matrix, arm_means)
 model_cumulative_plot(data, rewards, matrix, arm_means)
 
 param = model.save()
+# %%

@@ -217,6 +217,18 @@ __pycache__/
 06-TD/06-nSARSA/
 06-TD/07-nTreeBackup/
 
+# DQN
+O8-DQN/ 
+
+# PG
+09-PG/
+
+# APG
+10-APG/
+
+# MCTS
+11-MCTS/
+
 Exam/
 
 Misc/

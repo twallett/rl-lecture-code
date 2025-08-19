@@ -8,7 +8,7 @@ from torch.utils.tensorboard import SummaryWriter
 
 SEED = 123 
 ENV_NAME = "CartPole-v1"
-EPISODES = 20000
+EPISODES = 2000
 GAMMA = 0.99
 ALPHA_PI = 3e-04
 ALPHA_V = 1e-03
