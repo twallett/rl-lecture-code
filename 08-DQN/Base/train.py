@@ -9,9 +9,9 @@ from torch.utils.tensorboard import SummaryWriter
 
 SEED = 123 
 ENV_NAME = "CartPole-v1"
-EPISODES = 1000
+EPISODES = 500
 BATCH_SIZE = 64
-MAX_SIZE = 1000
+MAX_SIZE = 50000
 EPSILON = 1
 EPSILON_DECAY = 0.9999
 EPSILON_FINAL = 0.05
